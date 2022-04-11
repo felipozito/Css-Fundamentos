@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to top right, #3dc18c 0%, white 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: #3faf82;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10% auto;
+}
+.bar {
+  height: 6px;
+  width: 80px;
+  background-color: aliceblue;
+  box-shadow: 2px 5px 90px rgb(0, 0, 0);
+  transition: all 1s;
+}
+.container:active div:nth-child(2) {
+  transform: scale(0);
+  opacity: 0;
+}
+.container:active div:nth-child(1) {
+  animation: bar1 1s ease-in-out forwards;
+}
+@keyframes bar1 {
+  50% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(16px) rotate(45deg);
+  }
+}
+.container:active div:nth-child(3) {
+  animation: bar2 1s ease-in-out forwards;
+}
+@keyframes bar2 {
+  50% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(-16px) rotate(135deg);
+  }
+}
+.container div:nth-child(1) {
+  animation: bar1Reverse 1s ease-in-out;
+}
+@keyframes bar1Reverse {
+  0% {
+    transform: translateY(16px) rotateZ(45deg);
+  }
+  50% {
+    transform: translateY(16px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.container div:nth-child(3) {
+  animation: bar3revAnim 1s ease-in-out;
+}
+@keyframes bar3revAnim {
+  0% {
+    transform: translateY(-16px) rotateZ(135deg);
+  }
+  50% {
+    transform: translateY(-16px) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* optional - Finally i will hide the initial animation 
+        
+        If you want hide it else you can leave it as it is*/
+
+.container .no-animation .bar {
+  animation: none;
+}
