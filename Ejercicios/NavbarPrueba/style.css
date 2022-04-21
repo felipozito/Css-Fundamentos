@@ -38,6 +38,10 @@
       color: white;
       font-weight: bold;
 }
+.item:hover {
+      background-color: rgb(204, 129, 129);
+      transition: ease-in-out 0.5s;
+}
 #Inicio {
       height: 500px;
       background-color: rgb(211, 158, 92);
@@ -77,9 +81,17 @@
             justify-content: space-evenly;
             clip-path: circle(71.5% at 50% 51%);
             transition: 5s clip-path ease-in;
+            gap: 0;
       }
       .show {
             clip-path: circle(0% at 50% 50%);
             display: none;
+      }
+      .item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
       }
 }
