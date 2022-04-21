@@ -43,6 +43,30 @@
       background-color: rgb(204, 129, 129);
       transition: ease-in-out 0.5s;
 }
+.sub_list {
+      display: none;
+      background-color: rgb(229, 114, 114);
+      width: 90px;
+      padding-left: 20px;
+      margin-left: -10px;
+}
+.sub_item {
+      list-style: none;
+      padding: 10px 0;
+      cursor: pointer;
+}
+.sub_item a {
+}
+.sub_item:hover {
+      background-color: rgb(204, 129, 129);
+      transition: ease-in-out 0.5s;
+}
+.active {
+      display: block;
+      position: absolute;
+      top: 80px;
+}
+
 #Inicio {
       height: 500px;
       background-color: rgb(211, 158, 92);
@@ -94,5 +118,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+      }
+      .active {
+            display: none;
       }
 }
