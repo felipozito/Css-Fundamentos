@@ -29,9 +29,10 @@
       justify-content: space-evenly;
       align-items: center;
       gap: 20px;
+      height: 100%;
 }
 .item {
-      padding: 0 10px;
+      padding: 30px 10px;
 }
 .item a {
       text-decoration: none;
@@ -70,6 +71,10 @@
             font-size: 20px;
       }
       .list {
+            clip-path: circle(0% at 50% 50%);
+            display: none;
+      }
+      .show {
             background-color: rgb(243, 168, 170);
             position: fixed;
             width: 100%;
@@ -82,10 +87,6 @@
             clip-path: circle(71.5% at 50% 51%);
             transition: 5s clip-path ease-in;
             gap: 0;
-      }
-      .show {
-            clip-path: circle(0% at 50% 50%);
-            display: none;
       }
       .item {
             width: 100%;
