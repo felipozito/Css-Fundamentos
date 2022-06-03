@@ -55,8 +55,7 @@
       padding: 10px 0;
       cursor: pointer;
 }
-.sub_item a {
-}
+
 .sub_item:hover {
       background-color: rgb(204, 129, 129);
       transition: ease-in-out 0.5s;
@@ -86,7 +85,6 @@
 @media (max-width: 700px) {
       .navbar {
             background-color: rgb(229, 114, 114);
-            display: sticky;
       }
       .ico {
             display: block;
